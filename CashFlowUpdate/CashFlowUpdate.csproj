@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,6 +47,10 @@
     <Reference Include="SAPBusinessOneSDK" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SystemForms\AccountBalance.b1f.cs">
+      <DependentUpon>AccountBalance.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="UIConnection.cs" />
     <None Include="Form1.b1f">
       <FormCategory>UserForm</FormCategory>
     </None>
@@ -55,6 +60,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="SystemForms\AccountBalance.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="SystemForms\AccountBalance.b1f__orig_srf">
+      <DependentUpon>AccountBalance.b1f</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
